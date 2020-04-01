@@ -14,4 +14,4 @@ I've created a tutorial like walkthrough on the pipeline notebook itself you can
 * With the equation of the line we can get the curve of the lane and our position in the lane from center
 * Show a visual of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
-The main flaw of this pipeline is speed. Despite using a class to make sure the most expensive function find_lane_pixels() is only run on the first frame the pipeline sees, the pipeline is still slow to write the output video
+The main flaw of this pipeline is speed. Despite using a class to make sure the most expensive function find_lane_pixels() is only run on the first frame the pipeline sees, the pipeline is still slow to write the output video. The pipeline also has a week spot for large dark spots. Extended tree shadows and long patches of new ashphalt in the lane can cause blips of miscalculations you can see well in the challenge_video_output. Further threshold calibrating could help though smoothing and averaging the changes in the fit of the line over time may be more effective/robust.
